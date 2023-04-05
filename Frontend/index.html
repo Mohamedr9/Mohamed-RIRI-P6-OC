@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sophie Bluel - Architecte d'intérieur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <script type="text/javascript" src="js/loadWorks.js" defer></script>
+    <script type="text/javascript" src="js/checkLogin.js" defer></script>
+    <script type="text/javascript" src="js/logout.js" defer></script>
+  </head>
+
+  <body>
+    <!-- EDITION BANNER -->
+    <div class="edition-banner" id="edition-banner">
+      <i class="fa-regular fa-pen-to-square fa-lg"></i>
+      <p>mode édition</p>
+
+      <div class="btn-edition btn typo">publier les changements</div>
+    </div>
+    <header>
+      <!-- HEADER -->
+      <a href="./index.html">
+        <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1></a
+      >
+      <nav>
+        <ul>
+          <li>projets</li>
+          <li>contact</li>
+          <li id="login-logout-switch"></li>
+
+          <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Premiere modale -->
+      <div id="modal-gallery" class="modal">
+        <!-- Contenu de la modale -->
+        <div class="modal-content">
+          <!-- Fermeture de la modale -->
+          <span class="close">&times;</span>
+          <!-- Contenu -->
+          <div class="modal-body">
+            <h3>Galerie photo</h3>
+            <div id="gallery-edit" class="gallery gallery-small"></div>
+            <hr />
+
+            <button
+              class="btn btn-reverse btn-typo"
+              type="button"
+              id="open-second-modal"
+            >
+              Ajouter une photo
+            </button>
+            <p>Supprimer la galerie</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deuxieme modale -->
+      <div id="modal-add-picture" class="modal">
+        <!-- Contenu de la modale -->
+        <div class="modal-content modal-content-add-picture">
+          <div class="nav-symbols">
+            <!-- Flèche retour -->
+            <span class="close-arrow"
+              ><i class="fa-solid fa-arrow-left fa-xs"></i
+            ></span>
+            <!-- Fermeture de la modale -->
+            <span class="close">&times;</span>
+          </div>
+          <!-- Contenu -->
+          <div class="modal-body">
+            <h3>Ajout photo</h3>
+            <div class="add-picture-area">
+              <form
+                class="form form-add-picture"
+                enctype="multipart/form-data"
+                method="post"
+                id="formElem"
+              >
+                <div class="import-picture-area">
+                  <div id="image-preview" class="image-preview">
+                  <output></output>
+                  </div>
+                  <div id="img-display-area" class="img-display-area">
+                    <i class="fa-regular fa-image fa-2xl"></i>
+                  </div>
+
+                  <label>
+                    <input
+                      hidden
+                      type="file"
+                      accept="image/jpeg, image/png, image/jpg"
+                      id="image"
+                      name="image"
+                    />
+
+                    <span
+                      class="btn btn-clear btn-clear--wide btn-typo"
+                      id="add-picture-button"
+                      >+ Ajouter photo</span
+                    >
+                  </label>
+
+                  <span>jpg, png : 4mo max</span>
+                </div>
+                <div class="error-message" id="error-size-format"></div>
+                <label for="title">Titre</label>
+                <input
+                  class="choose-pic"
+                  id="title"
+                  type="text"
+                  name="title"
+                  required
+                />
+
+                <label for="category">Catégorie</label>
+                <select
+                  class="add-pic-input"
+                  id="category"
+                  name="category"
+                  required
+                >
+                  <option value=""></option>
+                </select>
+
+                <hr />
+                <input
+                  disabled
+                  class="btn-typo btn-disabled"
+                  type="submit"
+                  id="btn-valid-add-picture"
+                  value="Valider"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- INTRODUCTION -->
+      <section id="introduction">
+        <div class="photo-profil">
+          <figure>
+            <img src="./assets/images/sophie-bluel.png" alt="" />
+
+            <figcaption>
+              <div class="edition">
+                <button class="edition basic-typo hidden-button">
+                  <i class="fa-regular fa-pen-to-square fa-lg"></i> modifier
+                </button>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <article>
+          <h2>Designer d'espace</h2>
+          <p>
+            Je raconte votre histoire, je valorise vos idées. Je vous accompagne
+            de la conception à la livraison finale du chantier.
+          </p>
+          <p>
+            Chaque projet sera étudié en commun, de façon à mettre en valeur les
+            volumes, les matières et les couleurs dans le respect de l’esprit
+            des lieux et le choix adapté des matériaux. Le suivi du chantier
+            sera assuré dans le souci du détail, le respect du planning et du
+            budget.
+          </p>
+          <p>
+            En cas de besoin, une équipe pluridisciplinaire peut-être constituée
+            : architecte DPLG, décorateur(trice)
+          </p>
+        </article>
+      </section>
+      <!-- GALLERIE -->
+      <section id="portfolio">
+        <div class="titre-portfolio">
+          <div class="portfolio-header">
+            <h2>Mes Projets</h2>
+
+            <div class="edition" id="edition-gallery">
+              <button
+                class="edition basic-typo hidden-button"
+                id="open-first-modal"
+              >
+                <i class="fa-regular fa-pen-to-square fa-lg"></i> modifier
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Bouton de filtrage -->
+        <div id="tri">
+          <button class="sorting-all btn btn-typo" type="button" id="btn-all">
+            Tous
+          </button>
+        </div>
+        <div id="gallery-container"></div>
+      </section>
+      <!--  Formulaire de contact -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Vous avez un projet ? Discutons-en !</p>
+        <form class="form" action="#" method="post">
+          <label for="name">Nom</label>
+          <input type="text" name="name" id="name" />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <input type="submit" value="Envoyer" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <nav>
+        <ul>
+          <li>Mentions Légales</li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/880e844b52.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

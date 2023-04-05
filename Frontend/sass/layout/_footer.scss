@@ -1,0 +1,15 @@
+footer {
+  min-height: 50px;
+
+  & nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2em;
+  }
+}
+
+.footer {
+  flex-shrink: 0; 
+  padding: 20px;
+  margin: 0 100px;
+}

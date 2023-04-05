@@ -1,0 +1,29 @@
+#connexion {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > * {
+    text-align: center;
+  }
+
+  & h2 {
+    margin-bottom: 20px;
+  }
+
+  & a {
+    color: $colour-tertiary;
+  }
+}
+
+section {
+  flex: 1;
+}
+
+#login-focus {
+  font-weight: 800;
+}
+
+#logout {
+  font-size: inherit;
+}

@@ -1,0 +1,99 @@
+// Typo pour tous les boutons
+.btn-typo {
+  font-family: "Syne";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  &-light {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+// Bouton avec un background blanc
+.btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid $colour-primary;
+  border-radius: 60px;
+  margin: 3rem 0.5rem;
+  width: fit-content;
+  color: $colour-primary;
+  background-color: $colour-secondary;
+
+  &-reverse {
+    border: 1px solid $colour-white;
+    color: $colour-white;
+    background-color: $colour-primary;
+
+    &:hover {
+      border: 1px solid $colour-primary;
+    }
+
+    & a {
+      color: $colour-white;
+    }
+    &--wide {
+      padding: 0.5rem 2rem;
+    }
+  }
+  // Couleur 
+  &:focus {
+    color: $colour-white;
+    background-color: $colour-primary;
+
+    & a {
+      color: $colour-white;
+    }
+  }
+
+  // Boutton en gris
+  &-clear {
+    border: 1px solid $colour-modal-grey-dark;
+    color: $colour-modal-blue;
+    background-color: $colour-modal-grey-dark;
+    margin: 1rem 0.5rem;
+    &--wide {
+      padding: 0.5rem 2rem;
+    }
+    &:hover {
+      border: 1px solid $colour-modal-grey-light;
+    }
+  }
+}
+
+// Ecriture blanche et noire (edition mode)
+.btn-edition {
+  margin: auto 1rem;
+  padding: 0.8rem 2rem;
+  background: $colour-white;
+  border-radius: 60px;
+  color: black;
+  text-align: center;
+  font-weight: 600;
+}
+
+.btn-disabled {
+  border-radius: 60px;
+  width: fit-content;
+  color: white;
+  background-color: $colour-btn-disabled;
+  margin: 2em auto;
+  padding: 0.2rem 6rem;
+
+  &-activated {
+    background-color: $colour-primary;
+  }
+}
+
+.hidden-button {
+  padding: 0;
+  border: none;
+  background: none;
+
+  &:hover {
+    color: #b1663c;
+  }
+}

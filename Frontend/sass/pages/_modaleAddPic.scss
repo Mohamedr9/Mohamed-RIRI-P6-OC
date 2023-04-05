@@ -1,0 +1,59 @@
+/* ------------------------------MODALE AJOUTER PHOTO -------------------------- */
+.add-picture-area {
+  width: 100%;
+}
+
+.import-picture-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8f1f7;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 3rem;
+  padding-top: 1.5rem;
+}
+
+.img-display-area {
+  margin: 1rem auto;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  & i {
+    font-size: 5rem;
+    color: #b9c5cc;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* ------------------------------DISPLAY PREVIEW IMAGE -------------------------- */
+
+output {
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+  position: relative;
+  border-radius: 5px;
+  & .image {
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+    & img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.image-preview {
+  display: none;
+}

@@ -1,0 +1,38 @@
+/* Fermeture de la modale */
+
+.nav-symbols {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: -webkit-fill-available;
+}
+
+.close {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: 400;
+
+  &-arrow {
+    font-size: 24px;
+
+    &:hover,
+    &:focus {
+      color: black;
+      font-weight: 900;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

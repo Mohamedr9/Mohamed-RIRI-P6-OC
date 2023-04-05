@@ -1,0 +1,26 @@
+/* ------------------------------ EDITION ------------------------------------ */
+
+.edition-banner {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 4rem;
+  width: 100%;
+  background-color: $color-black;
+  color: $colour-white;
+  margin: auto;
+}
+
+.edition {
+  flex-direction: row;
+  align-items: baseline;
+
+  & i {
+    margin-right: 0.5rem;
+  }
+}
+
+.edition-banner i {
+  margin-right: 0.5rem;
+}
